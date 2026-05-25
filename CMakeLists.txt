@@ -70,16 +70,16 @@ else()
     )
 endif()
 
-# Target: Executive (avs_core)
-add_executable(avs_core main.cpp)
+# Target: Library (avs_core)
+add_library(avs_core INTERFACE)
 
 target_link_libraries(avs_core
-    PRIVATE
+    INTERFACE
         project_warnings
         project_options
 )
 
 target_include_directories(avs_core
-    PRIVATE
+    INTERFACE
         ${CMAKE_CURRENT_SOURCE_DIR}
 )
